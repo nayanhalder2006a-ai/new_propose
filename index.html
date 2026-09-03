@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 
@@ -36,6 +35,10 @@ body{
     overflow-x:hidden;
 }
 
+/* =========================
+   PHONE
+========================= */
+
 .phone{
     width:390px;
     max-width:100%;
@@ -66,6 +69,10 @@ body{
 
 }
 
+/* =========================
+   STATUS BAR
+========================= */
+
 .status{
     height:38px;
 
@@ -86,6 +93,10 @@ body{
     display:flex;
     gap:7px;
 }
+
+/* =========================
+   PAGES
+========================= */
 
 .pages{
     height:calc(100% - 38px);
@@ -121,6 +132,10 @@ body{
     transform:translateX(-100%);
 }
 
+/* =========================
+   TYPOGRAPHY
+========================= */
+
 .script{
     font-family:'Dancing Script',cursive;
 }
@@ -140,6 +155,10 @@ body{
     margin-top:5px;
 }
 
+/* =========================
+   HOME
+========================= */
+
 .home{
     display:flex;
     flex-direction:column;
@@ -156,6 +175,10 @@ body{
     color:#7d3850;
     font-size:14px;
 }
+
+/* =========================
+   SVG ENVELOPE
+========================= */
 
 .envelope-svg{
     width:260px;
@@ -185,6 +208,10 @@ body{
     fill:#d6336c;
     opacity:.12;
 }
+
+/* =========================
+   BUTTON
+========================= */
 
 .main-btn{
     border:none;
@@ -216,6 +243,10 @@ body{
 .main-btn:active{
     transform:scale(.95);
 }
+
+/* =========================
+   LETTER
+========================= */
 
 .letter-card{
 
@@ -264,13 +295,13 @@ body{
 
 }
 
-.letter-text p{
-    margin-bottom:15px;
-}
-
 .letter-text strong{
     color:#d6336c;
 }
+
+/* =========================
+   STYLE SELECTOR
+========================= */
 
 .style-label{
 
@@ -327,6 +358,10 @@ body{
 
 }
 
+/* =========================
+   PROPOSAL CARD
+========================= */
+
 .proposal-card{
 
     background:
@@ -381,6 +416,10 @@ body{
     color:#d6336c;
 }
 
+/* =========================
+   SVG HEART
+========================= */
+
 .svg-heart{
 
     width:90px;
@@ -403,6 +442,10 @@ body{
     }
 
 }
+
+/* =========================
+   FLOWERS
+========================= */
 
 .flowers{
 
@@ -432,6 +475,10 @@ body{
     width:100px;
 }
 
+/* =========================
+   DEEP STYLE
+========================= */
+
 .deep-card{
 
     background:
@@ -442,6 +489,10 @@ body{
         );
 
 }
+
+/* =========================
+   RING
+========================= */
 
 .ring{
 
@@ -466,6 +517,10 @@ body{
     }
 
 }
+
+/* =========================
+   FINAL
+========================= */
 
 .final{
 
@@ -525,10 +580,6 @@ body{
 
     margin-top:30px;
 
-    position:relative;
-
-    min-height:60px;
-
 }
 
 .yes{
@@ -573,6 +624,10 @@ body{
     cursor:pointer;
 
 }
+
+/* =========================
+   NAV
+========================= */
 
 .nav{
 
@@ -623,6 +678,10 @@ body{
     transform:scale(1.15);
 }
 
+/* =========================
+   HEART PARTICLES
+========================= */
+
 .floating-heart{
 
     position:absolute;
@@ -666,6 +725,69 @@ body{
     }
 
 }
+
+/* =========================
+   I LOVE YOU REVEAL
+   (shown right after tapping YES,
+   before the success screen)
+========================= */
+
+.iloveyou{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:105;
+
+    background:
+        radial-gradient(
+            circle,
+            #8c204b,
+            #270512
+        );
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    opacity:0;
+
+    transition:opacity .5s ease;
+
+}
+
+.iloveyou.show{
+    display:flex;
+    opacity:1;
+}
+
+.iloveyou h1{
+
+    font-family:'Dancing Script',cursive;
+
+    color:#ff9fbd;
+
+    font-size:70px;
+
+    line-height:1.1;
+
+    text-shadow:
+        0 0 25px #ff477e;
+
+    animation:
+        heartBeat 1s infinite;
+
+}
+
+/* =========================
+   SUCCESS
+========================= */
 
 .success{
 
@@ -719,6 +841,10 @@ body{
 
 }
 
+/* =========================
+   CONFETTI
+========================= */
+
 .confetti{
 
     position:absolute;
@@ -747,6 +873,10 @@ body{
 
 }
 
+/* =========================
+   FIREBASE STATUS
+========================= */
+
 .firebase-status{
 
     position:fixed;
@@ -772,6 +902,8 @@ body{
 
 <div class="phone">
 
+    <!-- STATUS -->
+
     <div class="status">
 
         <span id="time">00:00</span>
@@ -788,7 +920,9 @@ body{
     <div class="pages">
 
 
-        <!-- PAGE 1 -->
+        <!-- ==========================================
+             PAGE 1 — HOME
+        =========================================== -->
 
         <section class="page active" id="page0">
 
@@ -801,6 +935,7 @@ body{
                 <p class="subtitle">
                     একটা ছোট্ট surprise আছে তোমার জন্য...
                 </p>
+
 
                 <svg
                     class="envelope-svg"
@@ -858,9 +993,11 @@ body{
 
                 </svg>
 
+
                 <p class="home-text">
                     Open করো... 💌
                 </p>
+
 
                 <button
                     class="main-btn"
@@ -875,7 +1012,9 @@ body{
         </section>
 
 
-        <!-- PAGE 2 -->
+        <!-- ==========================================
+             PAGE 2 — LETTER
+        =========================================== -->
 
         <section class="page" id="page1">
 
@@ -921,6 +1060,7 @@ body{
 
             </div>
 
+
             <svg
                 class="svg-heart"
                 viewBox="0 0 100 100">
@@ -937,6 +1077,7 @@ body{
 
             </svg>
 
+
             <button
                 class="main-btn"
                 onclick="nextPage()">
@@ -948,7 +1089,9 @@ body{
         </section>
 
 
-        <!-- PAGE 3 -->
+        <!-- ==========================================
+             PAGE 3 — STYLES
+        =========================================== -->
 
         <section class="page" id="page2">
 
@@ -959,6 +1102,7 @@ body{
             <p class="style-label">
                 কোন কথাটা তোমার জন্য? 🥺
             </p>
+
 
             <div class="style-buttons">
 
@@ -1026,8 +1170,6 @@ body{
                     <br><br>
 
                     জীবনে অনেক মানুষ আসবে, যাবে…
-
-                    <br>
 
                     কিন্তু আমি চাই,
 
@@ -1151,6 +1293,7 @@ body{
 
                 </svg>
 
+
                 <h2>
                     Deep ❤️‍🩹
                 </h2>
@@ -1193,6 +1336,7 @@ body{
 
             </div>
 
+
             <br>
 
             <button
@@ -1206,7 +1350,9 @@ body{
         </section>
 
 
-        <!-- PAGE 4 -->
+        <!-- ==========================================
+             PAGE 4 — FINAL
+        =========================================== -->
 
         <section class="page final" id="page3">
 
@@ -1240,12 +1386,14 @@ body{
 
             </svg>
 
+
             <h1 class="final-question">
 
                 Will You<br>
                 Be Mine? ❤️
 
             </h1>
+
 
             <p class="final-text">
 
@@ -1270,6 +1418,7 @@ body{
 
             </p>
 
+
             <div class="final-buttons">
 
                 <button
@@ -1289,6 +1438,7 @@ body{
                 </button>
 
             </div>
+
 
             <div class="flowers">
 
@@ -1327,6 +1477,7 @@ body{
                         fill="#ffd166"/>
 
                 </svg>
+
 
                 <svg
                     class="flower-right"
@@ -1371,7 +1522,9 @@ body{
     </div>
 
 
-    <!-- BOTTOM NAV -->
+    <!-- =========================
+         BOTTOM NAV
+    ========================= -->
 
     <div class="nav">
 
@@ -1399,7 +1552,27 @@ body{
     </div>
 
 
-    <!-- SUCCESS -->
+    <!-- =========================
+         I LOVE YOU REVEAL
+         (shown first, right after YES)
+    ========================= -->
+
+    <div class="iloveyou" id="iloveyou">
+
+        <div>
+
+            <h1>
+                I Love You ❤️
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SUCCESS SCREEN
+    ========================= -->
 
     <div class="success" id="success">
 
@@ -1448,6 +1621,12 @@ body{
 
 <script type="module">
 
+/* ==================================================
+   1. FIREBASE CONFIGURATION
+
+   REPLACE THESE VALUES WITH YOUR FIREBASE CONFIG
+================================================== */
+
 import {
     initializeApp
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
@@ -1462,57 +1641,46 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 
-/* ==================================================
-   FIREBASE CONFIG
-================================================== */
-
 const firebaseConfig = {
 
-    apiKey: "AIzaSyApo53jI8hTiCP8fNEq3AIi2NkZm_72TnE",
+    apiKey: "YOUR_API_KEY",
 
     authDomain:
-        "webapp-e5183.firebaseapp.com",
+        "YOUR_PROJECT_ID.firebaseapp.com",
 
     projectId:
-        "webapp-e5183",
+        "YOUR_PROJECT_ID",
 
     storageBucket:
-        "webapp-e5183.firebasestorage.app",
+        "YOUR_PROJECT_ID.firebasestorage.app",
 
     messagingSenderId:
-        "976041884891",
+        "YOUR_MESSAGING_SENDER_ID",
 
     appId:
-        "1:976041884891:web:c2ede15b0e61ce138ba0fe",
-
-    measurementId:
-        "G-BWHX9XQ05R"
+        "YOUR_APP_ID"
 
 };
 
 
 /* ==================================================
-   INITIALIZE FIREBASE
+   2. INITIALIZE FIREBASE
 ================================================== */
 
 const app =
     initializeApp(firebaseConfig);
-
-
-/* ==================================================
-   INITIALIZE FIRESTORE
-================================================== */
 
 const db =
     getFirestore(app);
 
 
 /* ==================================================
-   PROPOSAL ID
+   3. PROPOSAL ID
+
+   Change this if you want multiple proposals.
 ================================================== */
 
-const proposalId =
-    "proposal001";
+const proposalId = "proposal001";
 
 
 const proposalRef =
@@ -1524,13 +1692,11 @@ const proposalRef =
 
 
 /* ==================================================
-   FIREBASE STATUS
+   4. FIREBASE STATUS
 ================================================== */
 
 const firebaseStatus =
-    document.getElementById(
-        "firebaseStatus"
-    );
+    document.getElementById("firebaseStatus");
 
 
 firebaseStatus.innerText =
@@ -1538,7 +1704,9 @@ firebaseStatus.innerText =
 
 
 /* ==================================================
-   CREATE PROPOSAL
+   5. CREATE PROPOSAL DOCUMENT
+
+   This creates the document if it doesn't exist.
 ================================================== */
 
 async function initializeProposal(){
@@ -1546,9 +1714,7 @@ async function initializeProposal(){
     try{
 
         const snapshot =
-            await getDoc(
-                proposalRef
-            );
+            await getDoc(proposalRef);
 
 
         if(!snapshot.exists()){
@@ -1572,41 +1738,30 @@ async function initializeProposal(){
                     accepted:
                         false,
 
-                    response:
-                        null,
-
-                    viewed:
-                        false,
-
                     createdAt:
                         serverTimestamp(),
 
                     responseAt:
-                        null,
-
-                    lastViewedAt:
                         null
 
                 }
             );
 
             console.log(
-                "Proposal created."
+                "Proposal document created."
             );
 
         }
 
-    }
-
-    catch(error){
+    }catch(error){
 
         console.error(
-            "Firebase initialization error:",
+            "Firebase error:",
             error
         );
 
         firebaseStatus.innerText =
-            "Firebase connection failed";
+            "Firebase error";
 
     }
 
@@ -1617,49 +1772,7 @@ initializeProposal();
 
 
 /* ==================================================
-   RECORD VIEW
-================================================== */
-
-async function recordView(){
-
-    try{
-
-        await updateDoc(
-            proposalRef,
-            {
-
-                viewed:
-                    true,
-
-                lastViewedAt:
-                    serverTimestamp()
-
-            }
-        );
-
-        console.log(
-            "Website view saved."
-        );
-
-    }
-
-    catch(error){
-
-        console.error(
-            "View tracking error:",
-            error
-        );
-
-    }
-
-}
-
-
-recordView();
-
-
-/* ==================================================
-   SAVE YES
+   6. RECORD YES RESPONSE
 ================================================== */
 
 window.saveYesResponse =
@@ -1684,25 +1797,54 @@ window.saveYesResponse =
             );
 
             console.log(
-                "YES response saved."
+                "YES response saved to Firebase."
             );
 
-            return true;
-
-        }
-
-        catch(error){
+        }catch(error){
 
             console.error(
-                "Could not save YES:",
+                "Could not save response:",
                 error
             );
-
-            return false;
 
         }
 
     };
+
+
+/* ==================================================
+   7. RECORD WEBSITE VIEW
+================================================== */
+
+async function recordView(){
+
+    try{
+
+        await updateDoc(
+            proposalRef,
+            {
+
+                lastViewedAt:
+                    serverTimestamp(),
+
+                viewed:
+                    true
+
+            }
+        );
+
+    }catch(error){
+
+        console.log(
+            "View tracking error:",
+            error
+        );
+
+    }
+
+}
+
+recordView();
 
 
 /* ==================================================
@@ -1712,31 +1854,20 @@ window.saveYesResponse =
 let currentPage = 0;
 
 const pages =
-    document.querySelectorAll(
-        ".page"
-    );
+    document.querySelectorAll(".page");
 
 const navButtons =
-    document.querySelectorAll(
-        ".nav button"
-    );
+    document.querySelectorAll(".nav button");
 
 
 window.goToPage =
     function(index){
 
-        if(index < 0){
-
+        if(index < 0)
             index = 0;
 
-        }
-
-        if(index >= pages.length){
-
-            index =
-                pages.length - 1;
-
-        }
+        if(index >= pages.length)
+            index = pages.length - 1;
 
 
         pages.forEach(
@@ -1891,21 +2022,15 @@ function moveNo(){
 
 
     const maxX =
-        Math.max(
-            20,
-            rect.width -
-            noBtn.offsetWidth -
-            30
-        );
+        rect.width -
+        noBtn.offsetWidth -
+        30;
 
 
     const maxY =
-        Math.max(
-            120,
-            rect.height -
-            noBtn.offsetHeight -
-            120
-        );
+        rect.height -
+        noBtn.offsetHeight -
+        100;
 
 
     const x =
@@ -1925,10 +2050,8 @@ function moveNo(){
     noBtn.style.position =
         "absolute";
 
-
     noBtn.style.left =
         x + "px";
-
 
     noBtn.style.top =
         y + "px";
@@ -1972,51 +2095,92 @@ noBtn.addEventListener(
 
 
 /* ==================================================
-   YES BUTTON
+   YES
+
+   Flow: tap YES -> save to Firebase
+         -> show "I Love You ❤️" reveal
+         -> after a short pause, show the
+            full success screen (confetti,
+            floating hearts, message)
 ================================================== */
 
 window.sayYes =
     async function(){
 
-        const saved =
-            await saveYesResponse();
+        /* Save response to Firestore */
+
+        await saveYesResponse();
 
 
-        if(!saved){
-
-            alert(
-                "YES save করা যায়নি। Firestore Rules এবং Firebase configuration check করুন।"
-            );
-
-            return;
-
-        }
-
+        /* Show "I Love You" reveal first */
 
         document
             .getElementById(
-                "success"
+                "iloveyou"
             )
             .classList.add(
                 "show"
             );
 
 
-        createConfetti();
-
+        /* A few hearts during the reveal */
 
         for(
             let i = 0;
-            i < 30;
+            i < 10;
             i++
         ){
 
             setTimeout(
                 createFloatingHeart,
-                i * 100
+                i * 120
             );
 
         }
+
+
+        /* After the reveal, move on to the success screen */
+
+        setTimeout(
+            function(){
+
+                document
+                    .getElementById(
+                        "iloveyou"
+                    )
+                    .classList.remove(
+                        "show"
+                    );
+
+
+                document
+                    .getElementById(
+                        "success"
+                    )
+                    .classList.add(
+                        "show"
+                    );
+
+
+                createConfetti();
+
+
+                for(
+                    let i = 0;
+                    i < 30;
+                    i++
+                ){
+
+                    setTimeout(
+                        createFloatingHeart,
+                        i * 100
+                    );
+
+                }
+
+            },
+            1800
+        );
 
     };
 
@@ -2127,7 +2291,6 @@ function createFloatingHeart(){
 
     heart.innerHTML =
         [
-
             "❤️",
             "💕",
             "💗",
@@ -2288,9 +2451,7 @@ document
 
                 nextPage();
 
-            }
-
-            else{
+            }else{
 
                 goToPage(
                     currentPage - 1
@@ -2304,5 +2465,4 @@ document
 </script>
 
 </body>
-
 </html>
